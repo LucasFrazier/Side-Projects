@@ -10,5 +10,6 @@ namespace SportClips.DAL
     {
         IList<Store> GetAllStores();
         int AddRequestOffToDb(RequestOff request);
+        IList<RequestOff> GetAllRequests();
     }
 }

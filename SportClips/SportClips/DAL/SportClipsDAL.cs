@@ -69,5 +69,41 @@ namespace SportClips.DAL
 
             return numRowsAffected;
         }
+
+        public IList<RequestOff> GetAllRequests()
+        {
+            List<RequestOff> Requests = new List<RequestOff>();
+
+            string query = @"SELECT * FROM requestOff";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Requests.Add(MapRowToRequestOff(reader));
+                }
+            }
+
+            return Requests;
+        }
+
+        private RequestOff MapRowToRequestOff(SqlDataReader reader)
+        {
+            return new RequestOff()
+            {
+                FirstName = Convert.ToString(reader["firstName"]),
+                LastName = Convert.ToString(reader["lastName"]),
+                StoreNumber = Convert.ToInt32(reader["storeNumber"]),
+                DateTimeOfRequest = Convert.ToDateTime(reader["dateTimeOfRequest"]),
+                DateFrom = Convert.ToDateTime(reader["dateFrom"]),
+                DateTo = Convert.ToDateTime(reader["dateTo"]),
+                Reason = Convert.ToString(reader["reason"])
+            };
+        }
     }
 }

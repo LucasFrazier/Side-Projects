@@ -45,6 +45,13 @@ namespace SportClips
             return RedirectToAction(action);
         }
 
+        //[HttpGet]
+        //public ActionResult CurrentRequests()
+        //{
+        //    IList<Store> model = _dal.GetAllRequests();
+        //    return View("CurrentRequests", model);
+        //}
+
 
     }
 }
