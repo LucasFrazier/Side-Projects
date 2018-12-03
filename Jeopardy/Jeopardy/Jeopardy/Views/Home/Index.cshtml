@@ -1,0 +1,22 @@
+﻿@section title{
+    Home
+}
+
+@section scripts{
+    <script src="~/Scripts/custom/categories.js"></script>
+}
+
+@using (Html.BeginForm("Submit", "Home", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Select Categories</label>
+        <select name="CategorySelect1" id="CategorySelect1" class="form-control form-control-md"></select>
+    </div>
+    <div class="form-group">
+        <select name="CategorySelect2" id="CategorySelect2" class="form-control form-control-md"></select>
+    </div>
+    <div class="form-group">
+        <select name="CategorySelect3" id="CategorySelect3" class="form-control form-control-md"></select>
+    </div>
+    <button id="submitCategories" class="formSubmitButton btn btn-primary btn-md">Submit</button>
+}
