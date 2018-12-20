@@ -1,0 +1,2 @@
+C:\Workspace\myGitHub\Side-Projects\RequestOff\RequestOff\RequestOff\obj\Debug\RequestOff.csprojAssemblyReference.cache
+C:\Workspace\myGitHub\Side-Projects\RequestOff\RequestOff\RequestOff\obj\Debug\RequestOff.csproj.CoreCompileInputs.cache

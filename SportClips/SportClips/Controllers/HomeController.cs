@@ -35,7 +35,7 @@ namespace SportClips
             int numRowsAffected = _dal.AddRequestOffToDb(model);
             if (numRowsAffected > 0)
             {
-                action = "Index";
+                action = "CurrentRequests";
             }
             else
             {
@@ -45,12 +45,11 @@ namespace SportClips
             return RedirectToAction(action);
         }
 
-        //[HttpGet]
-        //public ActionResult CurrentRequests()
-        //{
-        //    IList<Store> model = _dal.GetAllRequests();
-        //    return View("CurrentRequests", model);
-        //}
+        [HttpGet]
+        public ActionResult CurrentRequests()
+        {
+            return View("CurrentRequests");
+        }
 
 
     }

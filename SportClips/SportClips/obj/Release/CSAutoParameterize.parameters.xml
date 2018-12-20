@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="SportClips-Web.config Connection String" description="SportClips Connection String used in web.config by the application to access the database." defaultValue="Data Source=.\SQLEXPRESS;Initial Catalog=SportClips;Trusted_Connection=Yes;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Workspace\\myGitHub\\Side-Projects\\SportClips\\SportClips\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SportClips']/@connectionString" />
+  </parameter>
+</parameters>
